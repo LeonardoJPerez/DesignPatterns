@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0325E235-FECB-439F-9180-3C69065643A0}</ProjectGuid>
+    <ProjectGuid>{7FA27031-4880-4A5D-A818-7FFDB905E95D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PatternsTest</RootNamespace>
-    <AssemblyName>PatternsTest</AssemblyName>
+    <RootNamespace>StrategyPattern</RootNamespace>
+    <AssemblyName>StrategyPattern</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.2.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,32 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdapterPatternTest.cs" />
-    <Compile Include="FactoryPatternTest.cs" />
-    <Compile Include="StrategyPatternTest.cs" />
-    <Compile Include="ObserverPatternTest.cs" />
+    <Compile Include="ConcreteCalculation\Logarithm.cs" />
+    <Compile Include="ConcreteCalculation\DoubleSubstraction.cs" />
+    <Compile Include="ConcreteCalculation\DoubleAddition.cs" />
+    <Compile Include="ICalculate.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AdapterPattern\AdapterPattern.csproj">
-      <Project>{7002B0C4-2FBF-489E-AF1D-063A9529B0D8}</Project>
-      <Name>AdapterPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj">
-      <Project>{75E34CAA-AD5D-47A4-95DC-AB5C331CBAA3}</Project>
-      <Name>FactoryPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ObserverPattern\ObserverPattern.csproj">
-      <Project>{60f77227-3a69-47ef-a2ad-b887fd359942}</Project>
-      <Name>ObserverPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj">
-      <Project>{7FA27031-4880-4A5D-A818-7FFDB905E95D}</Project>
-      <Name>StrategyPattern</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
