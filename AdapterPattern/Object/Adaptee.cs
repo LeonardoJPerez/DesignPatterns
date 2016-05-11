@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AdapterPattern
+namespace AdapterPattern.Object
 {
     public class Adaptee
     {
         public void MethodA()
         {
-            Console.WriteLine("Method called from Adaptee instance!");
+            Console.WriteLine("Method called from Object.Adaptee instance!");
         }
     }
 }

@@ -2,12 +2,19 @@
 
 namespace AdapterPattern.Object
 {
-    public class Client : Adaptor
+    public class Client
     {
+        public Object.Adaptor Adaptor { get; private set; }
+
+        public Client()
+        {
+            this.Adaptor = new Object.Adaptor();
+        }
+
         public void DoWork()
         {
-            this.MethodB();
-            Console.WriteLine("Method called from Client instance!");
+            this.Adaptor.MethodB();
+            Console.WriteLine("Method called from Object.Client instance!");
         }
     }
 }

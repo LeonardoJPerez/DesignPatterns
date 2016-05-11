@@ -1,20 +1,24 @@
 ﻿using System;
 
-namespace AdapterPattern
+namespace AdapterPattern.Object
 {
     public class Adaptor
     {
-        private Adaptee _adatpeeInstance;
+        private Object.Adaptee _adapteeInstance;
 
         public Adaptor()
         {
-            _adatpeeInstance = new Adaptee();
+            this._adapteeInstance = new Object.Adaptee();
         }
 
         public void MethodB()
         {
-            this._adatpeeInstance.MethodA();
-            Console.WriteLine("Method called from Adapter instance!");
+            if (this._adapteeInstance != null)
+            {
+                this._adapteeInstance.MethodA();
+            }
+
+            Console.WriteLine("Method called from Object.Adapter instance!");
         }
     }
 }

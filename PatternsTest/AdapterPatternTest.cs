@@ -1,5 +1,4 @@
-﻿using AdapterPattern.Object;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace PatternsTest
 {
@@ -7,9 +6,18 @@ namespace PatternsTest
     public class AdapterPatternTest
     {
         [Test]
-        public void Run()
+        public void RunObjectAdapterTest()
         {
-            var client = new Client();
+            var client = new AdapterPattern.Object.Client();
+            client.DoWork();
+
+            Assert.Pass();
+        }
+
+        [Test]
+        public void RunClassAdapterTest()
+        {
+            var client = new AdapterPattern.Class.Client();
             client.DoWork();
 
             Assert.Pass();

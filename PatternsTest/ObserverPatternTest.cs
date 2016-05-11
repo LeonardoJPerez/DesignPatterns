@@ -9,7 +9,7 @@ namespace PatternsTest
     public class ObserverPatternTest
     {
         [Test]
-        public void Run()
+        public void RunTest()
         {
             var o1 = new ConcreteObserverA();
             var o2 = new ConcreteObserverB();
