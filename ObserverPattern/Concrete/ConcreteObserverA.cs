@@ -2,7 +2,7 @@
 
 namespace ObserverPattern.Concrete
 {
-    internal class ConcreteObserverA : IObserver
+    public class ConcreteObserverA : IObserver
     {
         public void Notify()
         {

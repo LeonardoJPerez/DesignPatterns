@@ -1,11 +1,15 @@
-﻿using ObserverPattern.Concrete;
+﻿using NUnit.Framework;
+using ObserverPattern;
+using ObserverPattern.Concrete;
 using System;
 
-namespace ObserverPattern
+namespace PatternsTest
 {
-    public class Program
+    [TestFixture]
+    public class ObserverPatternTest
     {
-        private static void Main(string[] args)
+        [Test]
+        public void Run()
         {
             var o1 = new ConcreteObserverA();
             var o2 = new ConcreteObserverB();
@@ -16,7 +20,8 @@ namespace ObserverPattern
 
             subject.NotifyListeners();
 
-            Console.ReadLine();
+            Console.WriteLine("Listeners notified!");
+            Assert.Pass();
         }
     }
 }

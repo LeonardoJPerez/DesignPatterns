@@ -6,6 +6,11 @@ namespace ObserverPattern
     {
         public IList<IObserver> Listeners { get; private set; }
 
+        public Subject()
+        {
+            this.Listeners = new List<IObserver>();
+        }
+
         public void RegisterObserver(IObserver observer)
         {
             if (observer != null)
