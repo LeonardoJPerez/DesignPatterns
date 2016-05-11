@@ -51,9 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AdapterPattern\AdapterPattern.csproj">
       <Project>{7002B0C4-2FBF-489E-AF1D-063A9529B0D8}</Project>
       <Name>AdapterPattern</Name>
@@ -70,6 +67,9 @@
       <Project>{7FA27031-4880-4A5D-A818-7FFDB905E95D}</Project>
       <Name>StrategyPattern</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
