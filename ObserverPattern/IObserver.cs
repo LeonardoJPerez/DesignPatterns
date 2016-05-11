@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattersSample
+namespace ObserverPattern
 {
-    class Program
+    public interface IObserver
     {
-        static void Main(string[] args)
-        {
-        }
+        void Notify();
     }
 }
